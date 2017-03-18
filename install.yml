@@ -21,11 +21,11 @@
        - telnet
        - httpd
 
-    - name: "Clone git repository"
-      git: dest=/var/www/html repo=https://github.com/jeyaramji/web01.git update=no
+    - name: "Clone git emz repository"
+      git: dest=/var/www/html/emz repo=https://github.com/jeyaramji/emz.git update=no
 
-    - name: "Copy index.html template"
-      template: src=templates/index.html.j2 dest="/var/www/html/index.html"
+#    - name: "Copy index.html template"
+#      template: src=templates/index.html.j2 dest="/var/www/html/index.html"
 
   handlers:
       - name: restart httpd
