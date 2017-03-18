@@ -1,0 +1,12 @@
+- name: UnConfigure webserver with Software packages
+  hosts: webserver
+  become: True
+  gather_facts: False
+  tasks:
+
+    - name: "Un-Installing RPMs"
+      yum: name={{ item }} state=absent
+      with_items:
+       - git
+       - telnet
+       - httpd
